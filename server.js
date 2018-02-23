@@ -4,7 +4,8 @@ const express    = require('express');
 const bodyParser = require('body-parser');
 const app        = express();
 const port       = 8000;
-//const routes    = require('./api/routes/route');
+const routes    = require('./routes');
+//import routes from './routes'
 
 
 
@@ -14,7 +15,7 @@ app.use(bodyParser.json());
 
 
 
-//routes(app);
+routes(app);
 
 app.listen(port, function(){
     console.log("we are live on port number", port)
